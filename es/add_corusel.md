@@ -18,11 +18,7 @@ Recuerde incluir la biblioteca de componentes [`amp-carousel`](../../../../docum
 A continuación, incrustemos un carrusel simple de imágenes con un diseño receptivo y un ancho y alto predefinidos. **Agregue** lo siguiente a su página:
 
 ```html
-<amp-carousel layout="fixed-height" height="168" type="carousel" >
-  <amp-img src="mountains-1.jpg" width="300" height="168"></amp-img>
-  <amp-img src="mountains-2.jpg" width="300" height="168"></amp-img>
-  <amp-img src="mountains-3.jpg" width="300" height="168"></amp-img>
-</amp-carousel>
+<amp-carousel layout="fixed-height" height="168" type="carousel" >   <amp-img src="mountains-1.jpg" width="300" height="168"></amp-img>   <amp-img src="mountains-2.jpg" width="300" height="168"></amp-img>   <amp-img src="mountains-3.jpg" width="300" height="168"></amp-img> </amp-carousel>
 ```
 
 **Actualice** su página y debería ver un carrusel:
@@ -42,11 +38,7 @@ Por último, hagamos que este carrusel se reproduzca automáticamente a una velo
 Su resultado final debería verse más o menos así:
 
 ```html
-<amp-carousel layout="responsive" width="300" height="168" type="slides" autoplay delay="2000" loop>
-  <amp-img src="mountains-1.jpg" width="300" height="168" layout="responsive"></amp-img>
-  <amp-img src="mountains-2.jpg" width="300" height="168" layout="responsive"></amp-img>
-  <amp-img src="mountains-3.jpg" width="300" height="168" layout="responsive"></amp-img>
-</amp-carousel>
+<amp-carousel layout="responsive" width="300" height="168" type="slides" autoplay delay="2000" loop>   <amp-img src="mountains-1.jpg" width="300" height="168" layout="responsive"></amp-img>   <amp-img src="mountains-2.jpg" width="300" height="168" layout="responsive"></amp-img>   <amp-img src="mountains-3.jpg" width="300" height="168" layout="responsive"></amp-img> </amp-carousel>
 ```
 
 **¡Actualiza** la página y dale una vuelta!
@@ -60,27 +52,13 @@ Los carruseles de imagen son geniales, pero ¿qué pasa si queremos que aparezca
 Primero, **agreguemos** este estilo a su `<style amp-custom>` para garantizar que los componentes [`amp-fit-text`](../../../../documentation/components/reference/amp-fit-text.md) y [`amp-carousel`](../../../../documentation/components/reference/amp-carousel.md) funcionen juntos de manera segura:
 
 ```css
-amp-fit-text {
-    white-space: normal;
-}
+amp-fit-text {     white-space: normal; }
 ```
 
 Ahora, **reemplace** su carrusel simple con esto:
 
 ```html
-<amp-carousel layout="fixed-height" height="250" type="carousel" >
-    <amp-img src="blocky-mountains-1.jpg" width="300" height="250"></amp-img>
-
-    <amp-ad width="300" height="250"
-      type="doubleclick"
-      data-slot="/35096353/amptesting/image/static">
-        <div placeholder>This ad is still loading.</div>
-    </amp-ad>
-
-    <amp-fit-text width="300" height="250" layout="fixed">
-        Big, bold article quote goes here.
-    </amp-fit-text>
-</amp-carousel>
+<amp-carousel layout="fixed-height" height="250" type="carousel" >     <amp-img src="blocky-mountains-1.jpg" width="300" height="250"></amp-img>      <amp-ad width="300" height="250"       type="doubleclick"       data-slot="/35096353/amptesting/image/static">         <div placeholder>This ad is still loading.</div>     </amp-ad>      <amp-fit-text width="300" height="250" layout="fixed">         Big, bold article quote goes here.     </amp-fit-text> </amp-carousel>
 ```
 
 **Actualice** la página y debería ver algo como esto:
